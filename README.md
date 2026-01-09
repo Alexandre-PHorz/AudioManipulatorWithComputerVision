@@ -230,7 +230,11 @@ Distribuído sob a Licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 📧 fernandodorneles95@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/fernandodorneles) · [Lattes](http://lattes.cnpq.br/0532418852427960)  
 🔗 Repositório: [GitHub](https://github.com/dornelesfernando/AudioManipulatorWithComputerVision)
-
+---
+**Alexandre Pires Hörz**
+📧 alexandre.phorz@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/alexandre-phorz/)   
+🔗 Repositório: [GitHub](https://github.com/Alexandre-PHorz/AudioManipulatorWithComputerVision)
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 ---

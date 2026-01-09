@@ -2,7 +2,7 @@ import os
 from pydub import AudioSegment
 from pydub.exceptions import CouldntDecodeError
 
-def converter_audio_para_wav(caminho_arquivo_entrada, caminho_arquivo_saida = 'music/song'):
+def converter_audio_para_wav(caminho_arquivo_entrada='music/notwav.webm', caminho_arquivo_saida = 'music/song'):
     """
     Converte um arquivo de áudio para o formato WAV.
 

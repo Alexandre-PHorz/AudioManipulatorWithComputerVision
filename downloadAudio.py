@@ -1,5 +1,6 @@
 import yt_dlp
 import os
+import json
 
 def baixar_melhor_audio_youtube(url_video, diretorio_saida = "music"):
     """
@@ -25,7 +26,7 @@ def baixar_melhor_audio_youtube(url_video, diretorio_saida = "music"):
     # Configurações para o yt-dlp para baixar o melhor áudio sem conversão específica
     ydl_opts = {
         'format': 'bestaudio/best',  # Seleciona o melhor áudio-somente disponível
-        'outtmpl': os.path.join(diretorio_saida, '%(title)s.%(ext)s'), # Nomeia o arquivo com o título e sua extensão original
+        'outtmpl': os.path.join(diretorio_saida, 'notwav.%(ext)s'), # Nomeia o arquivo com o título e sua extensão original
         'keepvideo': False,          # Não mantém arquivos de vídeo se um formato de vídeo for baixado temporariamente
         'noplaylist': True,          # Baixa apenas o vídeo especificado, não a playlist inteira
         'quiet': False,              # Mostra o output do yt-dlp
@@ -74,10 +75,14 @@ def baixar_melhor_audio_youtube(url_video, diretorio_saida = "music"):
     except Exception as e:
         print(f"\nOcorreu um erro inesperado durante a execução: {e}")
         return None
-    
+
+with open('settings.json','r') as j:
+    data = json.load(j)
+
+
 if __name__ == "__main__":
     # 🔽🔽🔽 MODIFIQUE A LINHA ABAIXO PARA A URL DO VÍDEO DESEJADO 🔽🔽🔽
-    url_do_video_youtube = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+    url_do_video_youtube = data['music']['URL']
     # Exemplo: url_do_video_youtube = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" # Substitua por uma URL real
     # 🔼🔼🔼 MODIFIQUE A LINHA ACIMA PARA A URL DO VÍDEO DESEJADO 🔼🔼🔼
 
