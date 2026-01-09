@@ -48,6 +48,7 @@ class SystemVolumeControl:
         self.target_max_db_override = max_db_value
         
     def set_volume_percentage(self, length: float, HAND_DIST_MIN: int, HAND_DIST_MAX: int):
+        import numpy as np
         # Cálculo básico de porcentagem (0 a 100)
         vol_percent = np.interp(length, [HAND_DIST_MIN, HAND_DIST_MAX], [0, 100])
         vol_percent = np.clip(vol_percent, 0, 100)

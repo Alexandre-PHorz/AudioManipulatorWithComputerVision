@@ -1,6 +1,8 @@
 import cv2
-import mediapipe as mp
+import mediapipe.python as mp
 import numpy as np
+
+
 
 class HandDetector:
     def __init__(self, 

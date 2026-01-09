@@ -1,8 +1,9 @@
 opencv-python
 sounddevice
-mediapipe
+mediapipe==0.10.13
 pycaw
 soundfile
 yt-dlp
 pydub
 pedalboard
+alsaaudio
