@@ -4,6 +4,7 @@ import math
 import os
 import numpy as np
 import sounddevice as sd
+from pathlib import Path
 
 # Importando classes de módulos
 from hand_detector_module import HandDetector
@@ -12,6 +13,7 @@ from audio_control_module import AudioControl
 from filter.reverb_delay_control_module import ReverbControl # Classe que agora lida com Reverb e Delay
 
 # --- Variáveis Globais para Reprodução de Áudio e Efeitos ---
+f_path = Path('music/song.wav')
 current_playback_frame = 0
 playback_active = False
 audio_data_global = None
@@ -96,7 +98,11 @@ if __name__ == '__main__':
 
     # --- CARREGAMENTO DO ÁUDIO ---
     audio_controller = AudioControl()
-    audio_file_path = input("Digite o caminho para o seu arquivo de áudio (ex: sua_musica.wav): ")
+
+    if not f_path.is_file():
+        audio_file_path = input("Digite o caminho para o seu arquivo de áudio (ex: sua_musica.wav): ")
+    else:
+        audio_file_path = 'music/song.wav'
     
     audio_loaded_successfully = audio_controller.load_audio(audio_file_path)
     if audio_loaded_successfully:
